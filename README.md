@@ -54,7 +54,7 @@ Below are some steps for the installation of the app in local system.
 1 -> Clone the repo.
 
 ```bash
-  https://github.com/riteshsoni123/
+  https://github.com/riteshsoni123/news-app.git
 ```
 
 2 ->Change the directory to client.
