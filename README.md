@@ -1,70 +1,74 @@
-# Getting Started with Create React App
+# About the project
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a news web app that makes use of news api provided by
+https://newsapi.org . This app has the functionality to search
+any topic of news using search bar. In addition to that it also
+consists of some predefined tag for quick search like
+(Tech/Sports/Business).
 
-## Available Scripts
+## Screenshots
 
-In the project directory, you can run:
+![Screenshot (393)](https://user-images.githubusercontent.com/26280032/193422340-c74fbaca-906d-47f3-b730-c2ec58bd26ea.png)
+![Screenshot (394)](https://user-images.githubusercontent.com/26280032/193422349-b0958dcd-6dcb-4c56-935d-f858635f8502.png)
+![Screenshot (395)](https://user-images.githubusercontent.com/26280032/193422350-37008b38-ecad-45de-9eca-23b9e3e4f62c.png)
 
-### `npm start`
+# Working
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+This section explains the method used to create the project.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- The react app consists of four components "Cards" , "NavBar" ,
+  "SearchBar" and "IndividualCard".
 
-### `npm test`
+- The SearchBar component consists of search bar from where we can
+  search the topic of which we want the news. It also consists of
+  a dropdown menu from which we can quickly select the tag and
+  and get the news of that specific tag.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- The IndividualCard component conststs of a card for individual
+  news.It is called according to the number of news present about
+  a specific topic.
 
-### `npm run build`
+- The NavBar component , as of now, has no functionality.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- The Cards component consists of to component SearchBar and
+  IndividualCard. The component SearchBar helps to fetch the data
+  from api and it stores it in a state "data". Then the stored data
+  is looped with the help of map function and each news data is
+  passed to another component IndividualCard which then displays
+  that news to the user in form of cards.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+# Built with
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- ReactJs
+- CSS
+- MaterialUI
 
-### `npm run eject`
+# Getting Started
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Installation
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Below are some steps for the installation of the app in local system.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+---
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+1 -> Clone the repo.
 
-## Learn More
+```bash
+  https://github.com/riteshsoni123/
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+2 ->Change the directory to client.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+3 -> Install NPM packages.
 
-### Code Splitting
+```bash
+  npm install
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Start app
 
-### Analyzing the Bundle Size
+To start the app write the following command.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```bash
+  npm start
+```
