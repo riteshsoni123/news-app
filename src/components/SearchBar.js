@@ -6,6 +6,7 @@ import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
 import InputLabel from "@mui/material/InputLabel";
+import env from "react-dotenv";
 
 function SearchBar(props) {
   const [tag, setTag] = useState("");
@@ -14,7 +15,7 @@ function SearchBar(props) {
     const fetchData = async () => {
       try {
         const { data } = await axios.get(
-          `top-headlines?country=in&apiKey=a9de866e655a4f9cb5a53ece3d5407bc`
+          `top-headlines?country=in&apiKey=${process.env.REACT_APP_API_KEY}`
         );
         setData(data.articles);
       } catch (error) {
@@ -28,7 +29,7 @@ function SearchBar(props) {
     setData([]);
     try {
       const { data } = await axios.get(
-        `everything?q=${searchText}&from=2022-09-26&sortBy=popularity&apiKey=a9de866e655a4f9cb5a53ece3d5407bc`
+        `everything?q=${searchText}&from=2022-09-26&sortBy=popularity&apiKey=${process.env.REACT_APP_API_KEY}`
       );
       setData(data.articles);
     } catch (error) {
@@ -46,7 +47,7 @@ function SearchBar(props) {
     const fetchData = async () => {
       try {
         const { data } = await axios.get(
-          `everything?q=${event.target.value}&from=2022-09-26&sortBy=popularity&apiKey=a9de866e655a4f9cb5a53ece3d5407bc`
+          `everything?q=${event.target.value}&from=2022-09-26&sortBy=popularity&apiKey=${process.env.REACT_APP_API_KEY}`
         );
         setData(data.articles);
       } catch (error) {
@@ -94,6 +95,7 @@ function SearchBar(props) {
             </Select>
           </FormControl>
         </div>
+        {env.API_KEY}
       </div>
     </>
   );
