@@ -23,13 +23,13 @@ function SearchBar(props) {
       }
     };
     fetchData();
-  }, []);
+  }, [setData]);
 
   const searchResult = async () => {
     setData([]);
     try {
       const { data } = await axios.get(
-        `everything?q=${searchText}&from=2022-09-26&sortBy=popularity&apiKey=${process.env.REACT_APP_API_KEY}`
+        `everything?q=${searchText}&from=2022-11-19&sortBy=popularity&apiKey=${process.env.REACT_APP_API_KEY}`
       );
       setData(data.articles);
     } catch (error) {
@@ -47,7 +47,7 @@ function SearchBar(props) {
     const fetchData = async () => {
       try {
         const { data } = await axios.get(
-          `everything?q=${event.target.value}&from=2022-09-26&sortBy=popularity&apiKey=${process.env.REACT_APP_API_KEY}`
+          `everything?q=${event.target.value}&from=2022-11-19&sortBy=popularity&apiKey=${process.env.REACT_APP_API_KEY}`
         );
         setData(data.articles);
       } catch (error) {
